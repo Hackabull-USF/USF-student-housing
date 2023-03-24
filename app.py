@@ -11,7 +11,7 @@ def home():
 @app.route("/apt", methods=["GET"])
 def apt_post():
     headers = {'User-Agent' : 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36'}
-    data = requests.get('https://www.apartments.com/off-campus-housing/fl/tampa/university-of-south-florida-at-tampa-tampa-campus/apartments/',headers=headers)
+    data = requests.get('https://www.apartments.com/off-campus-housing/fl/tampa/university-of-south-florida-at-tampa-tampa-campus/apartments/student-housing/',headers=headers)
     soup = BeautifulSoup(data.text, 'html.parser')
 
     trs = soup.select('#placardContainer > ul > li')
