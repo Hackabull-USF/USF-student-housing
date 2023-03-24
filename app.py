@@ -23,11 +23,19 @@ def apt_post():
             apt_address = tr.select_one('article > header > div.property-information > a > div.property-address.js-url').text
             apt_price = tr.select_one('article > section > div > div.property-info > div > div.top-level-info > a > p.property-pricing').text
             apt_size = tr.select_one('article > section > div > div.property-info > div > div.top-level-info > a > p.property-beds').text
+            apt_link = tr.select_one('article > header > div.property-information > a')['href']
+            apt_img = 'img'
+            try: 
+                apt_img = tr.select_one('article > section > div > div.media-wrapper > div.media-outer > div > div > div.imageContainer.carousel.slide > div.carouselInner > div')['style'][23:-3]
+            except:
+                apt_img = tr.select_one('article > section > div > div.media-wrapper > div.media-outer > div > div > div.imageContainer.carousel.slide > div.carouselInner > div')['data-image']
             info = {
                 'name': apt_name,
                 'address': apt_address,
                 'price': apt_price,
-                'size': apt_size
+                'size': apt_size,
+                'link': apt_link,
+                'image': apt_img
             }
             apt_info.append(info)
     return jsonify({'apt_info': apt_info})
