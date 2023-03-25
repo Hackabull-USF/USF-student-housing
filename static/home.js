@@ -27,7 +27,7 @@ function listing() {
                                             <p class="card-subtitle mb-2 text-muted>${address}</p>
                                             <p class="card-text">${price}</p>
                                             <p class="aptsize">${size}</p>
-                                            <a class="btn btn-primary" href="${link}" role="button" style="border: 0px; background-color: #046648;">VISIT</a>
+                                            <a class="btn btn-primary" href="${link}" target="_blank" role="button" style="border: 0px; background-color: #046648;">VISIT</a>
                                         </div>
                                     </div>
                                 </div>

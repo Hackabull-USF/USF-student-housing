@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Delicious+Handrawn&family=Inter&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Delicious+Handrawn&family=Poppins&display=swap");
 
 .mytitle {
 	font-family: "Delicious Handrawn", cursive;
@@ -36,7 +36,7 @@
 }
 
 .mycards {
-	font-family: "Inter", sans-serif;
+	font-family: "Poppins", sans-serif;
 	width: 1200px;
 	margin: 20px auto 20px auto;
 }
