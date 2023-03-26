@@ -106,7 +106,7 @@ We worked together in most of parts, but put more time and be specified in each 
 <tbody>
     <tr>
         <td>Siwon Kim</td>
-        <td>Jason Yoo</td>
+        <td>Hyunjun Yoo</td>
         <td>Hyunjung Lee</td>
     </tr>
     <tr>
