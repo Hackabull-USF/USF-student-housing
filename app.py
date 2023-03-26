@@ -11,7 +11,8 @@ def home():
 @app.route("/apt", methods=["GET"])
 def apt_post():
     url = 'https://www.apartments.com/off-campus-housing/fl/tampa/university-of-south-florida-at-tampa-tampa-campus/apartments/student-housing/'
-    apt_info = []        
+    apt_info = [] 
+    apt_id = 0       
     for page in range(1, 3):
         headers = {'User-Agent' : 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36'}
         if page == 1:
@@ -43,15 +44,25 @@ def apt_post():
                     except:
                         apt_img = tr.select_one('article > section > div > div.media-wrapper > div.media-outer > a > div > div > div.imageContainer.carousel.slide > div > div')['data-image']
                 
+                apt_details = tr.select('article > section > div > div.property-info > div > a > p')
+                details_list = []
+                for apt_detail in apt_details:
+                    for detail in apt_detail:
+                        if detail.text != '\n':
+                            details_list.append(detail.text)
+
                 info = {
+                    'id': apt_id,
                     'name': apt_name,
                     'address': apt_address,
                     'price': apt_price,
                     'size': apt_size,
                     'link': apt_link,
-                    'image': apt_img
+                    'image': apt_img,
+                    'details': details_list
                 }
                 apt_info.append(info)
+                apt_id += 1
 
     return jsonify({'apt_info': apt_info})
 
