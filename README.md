@@ -1,5 +1,5 @@
-# USF-student-housing
-> USF Users can view student apartments near USF in the fastest and easiest way.
+# :ox: USF Student Housing Project
+> USF students can view student apartments near USF in the fastest and easiest way.
 
 <img src="https://github.com/Hackabull-USF/USF-student-housing/blob/main/USF-student-apartment-project.gif" width="1000" height="500"/>
 
