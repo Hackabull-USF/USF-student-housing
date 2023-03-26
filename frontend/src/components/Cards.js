@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { Button, Card } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 
+import Hover from "./Hover"
 const Cards = () => {
 	const [apts, setApts] = useState([{}]);
 
@@ -15,11 +16,13 @@ const Cards = () => {
 			})
 			.catch((err) => console.log(err));
 	}, []);
-
+	let address;
 	return (
 		<div className="mycards">
-			<div id="cards" className="row row-cols-1 row-cols-md-4 g-4">
+			<div id="cards" className="row row-cols-1 row-cols-md-4 g-4 cols-lg-6">
+			
 				{apts.map((a) => {
+					address = a["address"]
 					return (
 						<div className="col">
 							<Card style={{ height:"30rem", width: "18rem" }}>
@@ -31,7 +34,7 @@ const Cards = () => {
 								<Card.Body>
 									<Card.Title>{a["name"]}</Card.Title>
 									<Card.Subtitle className="mb-2 text-muted">
-										{a["address"]}
+										{address}
 									</Card.Subtitle>
 									<Card.Text>{a["price"]}</Card.Text>
 									<Card.Text>{a["size"]}</Card.Text>
@@ -45,11 +48,15 @@ const Cards = () => {
 									>
 										VISIT
 									</Button>
+									<Hover position={address}/>
 								</Card.Body>
 							</Card>
 						</div>
 					);
 				})}
+			</div>
+
+			<div id="cards" className="row row-cols-1 row-cols-md-4 g-4 cols-lg-6">
 			</div>
 		</div>
 	);
