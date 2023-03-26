@@ -30,7 +30,7 @@ const Cards = () => {
 					style={{
 						border: "0px",
 						backgroundColor:
-							"#828489",
+							"#046648",
 						marginLeft: "10px",
 					}}
 				>
@@ -81,7 +81,7 @@ const Cards = () => {
 													style={{
 														border: "0px",
 														backgroundColor:
-															"#F95738",
+															"#046648",
 													}}
 												>
 													VISIT
