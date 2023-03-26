@@ -3,6 +3,8 @@ import { useEffect, useState } from "react";
 import { Button, Card } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 
+import Hover from "./Hover";
+
 const Cards = () => {
 	const [apts, setApts] = useState([{}]);
 
@@ -11,7 +13,6 @@ const Cards = () => {
 			.then((res) => res.json())
 			.then((data) => {
 				setApts(data["apt_info"]);
-				console.log(apts);
 			})
 			.catch((err) => console.log(err));
 	}, []);
@@ -55,6 +56,7 @@ const Cards = () => {
 										>
 											VISIT
 										</Button>
+										<Hover position={address} />
 									</Card.Body>
 								</Card>
 							</div>
