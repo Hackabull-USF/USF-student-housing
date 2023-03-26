@@ -19,7 +19,7 @@ export default function Hover(position){
 
 const Example = (position) => (
   <OverlayTrigger trigger="click" placement="right" overlay={popover(position)}>
-    <Button variant="success" style={{ marginLeft: "10px" }}>Click me to see</Button>
+    <Button variant="success" style={{ marginLeft: "10px" }}>MAP</Button>
   </OverlayTrigger>
 );
 
