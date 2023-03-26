@@ -14,11 +14,8 @@
 		"react": "^18.2.0",
 		"react-bootstrap": "^2.7.2",
 		"react-dom": "^18.2.0",
-<<<<<<< HEAD
 		"react-router-dom": "^6.9.0",
-=======
 		"react-geocode": "^0.2.3",
->>>>>>> 2009d7b8db8a8e72e26d2c2faa8e62982c13ef6e
 		"react-scripts": "5.0.1",
 		"web-vitals": "^2.1.4"
 	},

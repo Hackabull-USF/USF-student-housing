@@ -57,6 +57,16 @@ const Cards = () => {
 											VISIT
 										</Button>
 										<Hover position={address} />
+										<Button
+											variant="primary"
+											href={link}
+											style={{
+												border: "0px",
+												backgroundColor: "#046648",
+											}}
+										>
+											VISIT
+										</Button>
 									</Card.Body>
 								</Card>
 							</div>
