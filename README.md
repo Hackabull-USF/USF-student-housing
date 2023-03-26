@@ -68,7 +68,7 @@ on a single page to make it easier for students to find housing.
  ┃ ┃ ┃ ┃ ┣ 📂 Maps.js
  ┃ ┃ ┗ 📂 App.css
  ┃ ┃ ┗ 📂 App.css
- ┃ ┃┗ 📂 App.js
+ ┃ ┃ ┗ 📂 App.js
  ┃ ┃ ┗ 📂 index.css
  ┃ ┃ ┗ 📂 index.js
  ┣ 📂 .gitignore
