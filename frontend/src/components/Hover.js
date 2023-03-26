@@ -4,8 +4,9 @@ import Popover from 'react-bootstrap/Popover';
 import Maps from "./Maps";
 
 const popover = (position) => (
-  <Popover id="popover-basic" style={{width: "350px"}}>
+  <Popover id="popover-basic">
     <Popover.Header as="h3">Location</Popover.Header>
+    <p style={{ margin: '15px'}}>{position.position.position}</p>
     <Popover.Body id="popover">
       <Maps position={position}/>
     </Popover.Body>

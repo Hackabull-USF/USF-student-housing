@@ -9,7 +9,6 @@ import Container from "./Container";
 const Cards = () => {
 	const [apts, setApts] = useState([{}]);
 	const [selectedApts, setSelectedApts] = useState([{}]);
-	console.log(selectedApts);
 
 	useEffect(() => {
 		fetch("/apt")
@@ -24,19 +23,20 @@ const Cards = () => {
 		<>
 			<Container>
 				<Button
-					onClick={() => {setSelectedApts([])}}
+					onClick={() => {
+						setSelectedApts([]);
+					}}
 					id="clearBtn"
 					variant="primary"
 					style={{
 						border: "0px",
-						backgroundColor:
-							"#046648",
+						backgroundColor: "#046648",
 						marginLeft: "10px",
 					}}
 				>
 					CLEAR
 				</Button>
-				<div className="mycards">
+				<div className="mycards" id="selectedMyCards">
 					<div
 						id="cards"
 						className="row row-cols-1 row-cols-md-4 g-4"
@@ -92,7 +92,7 @@ const Cards = () => {
 									</div>
 								);
 							} catch {
-								console.log("err");
+								console.log("idx 0");
 							}
 						})}
 					</div>
@@ -178,5 +178,6 @@ const Cards = () => {
 		</>
 	);
 };
+
 
 export default Cards;
